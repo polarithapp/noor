@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-app-bg text-text-main font-sans antialiased;
+    /* Prevent pull-to-refresh on mobile for a native app feel */
+    overscroll-behavior-y: none; 
+  }
+}
+
+/* Hide scrollbar for clean app UI */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
